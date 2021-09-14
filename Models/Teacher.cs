@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace UddataH1.Models
 {
-    class Teacher : Person
+    sealed class Teacher : Person //sealed makes it so the class can't be inherited from.
     {
         public List<Course> courses = new List<Course>();
+        public bool CoffeClub { get; set; }
     }
 }

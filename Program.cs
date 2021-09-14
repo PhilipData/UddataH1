@@ -1,4 +1,5 @@
 ﻿using UddataH1.Models;
+using UddataH1.View;
 using System;
 using System.Collections.Generic;
 
@@ -9,6 +10,8 @@ namespace UddataH1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Menu MainMenu = new Menu();
+            MainMenu.MainMenu();
         }
         void InsertData()
         {
