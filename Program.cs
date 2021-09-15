@@ -15,13 +15,24 @@ namespace UddataH1
         }
         void InsertData()
         {
-            Teacher teacher1 = new Teacher()
+            Student teacher1 = new Student()
             {
                 Id = 1,
                 Name = "Andersen",
                 Email = "Andersen@gmail.com"
 
             };
+
+            Student teacher2 = new Student()
+            {
+                Id = 2,
+                Name = "Kaj",
+                Email = "Kaj@gmail.com"
+
+            };
+
+
+
             Course Math = new Course()
             {
                 Id= 1,

@@ -29,10 +29,14 @@ Email nvarchar(255)
 create table Course(
 Id int identity (1,1) Primary Key,
 [Name] nvarchar(255),
-Teacher nvarchar(255)
+FK_Teacher nvarchar(255)
 )
 
 create table StudentCourse(
 FK_StudentId int,
+FK_CourseId int
+)
+create table TeacherCourse(
+FK_TeachereId int,
 FK_CourseId int
 )

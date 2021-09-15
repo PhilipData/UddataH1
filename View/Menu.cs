@@ -4,70 +4,55 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic;
 
 namespace UddataH1.View
 {
     class Menu
     {
+        TeacherView tv = new TeacherView();
         public void MainMenu()
         {
-            Console.WriteLine("*** MAIN MENU ***");
-
-            Console.WriteLine("1: Show all teachers");
-            Console.WriteLine("2: Add Teacher");
-            string userInput = Console.ReadLine();
-
-            switch (userInput)
+            while (true)
             {
-                case "1":
+                Console.WriteLine("*** MAIN MENU ***");
 
-                    break;
-                case "2":
-                    AddTeacher();
-                    break;
-                case "3":
+                Console.WriteLine("1: Show all teachers");
+                Console.WriteLine("2: Add Teacher");
+                Console.WriteLine("3: Add Teacher");
+                string userInput = Console.ReadLine();
 
-                    break;
-                case "4":
+                switch (userInput)
+                {
+                    case "1":
+                        tv.ShowTeachers(tv.ListOfAllTeachers);
+                        break;
+                    case "2":
+                        // Add new teacher
+                        tv.AddTeacher();
+                        break;
+                    case "3":
+                        tv.SearchTeacher();
+                        // show All Students
+                        break;
+                    case "4":
+                        // Add new Student
+                        break;
+                    case "5":
+                        //Search Teacher
+                        break;
+                    case "6":
+                        //Search Student
+                        break;
+                    default:
 
-                    break;
-                case "5":
-
-                    break;
-                default:
-
-                    break;
+                        break;
+                }
             }
-
-        }
-
-        private void AddTeacher()
-        {
-            Teacher teacher = new Teacher();
-            Console.WriteLine("Insert Name on Teacher: ");
-            teacher.Name = Console.ReadLine();
-
-            Console.WriteLine("Insert Email on Teacher: ");
-            teacher.Email = Console.ReadLine();
-
-            Console.WriteLine("Is the teacher signed up to the Coffee club? Tast\n 1: Yes\n2:No");
-
-            teacher.CoffeClub = true;
-        }
-        static internal bool YESNO(string YESNO)
-        {
             
-            if (YESNO.ToUpper() == "Y")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
 
         }
+
         
     }
 }

@@ -1,10 +1,9 @@
 ﻿namespace UddataH1.Models
 {
-    public enum CourseType { Danish, Matmatics, English, German, Religion, Sports}
+    public enum CourseType { Dan, Mat, Eng, Ger, Rel, Spo}
     class Course : BaseClass
     {
-        public Teacher Teacher { get; set; }
-        public string ClassRoom { get; set; }
+        public Student Teacher { get; set; }
         public CourseType CourseType{ get; set; }
 
         
