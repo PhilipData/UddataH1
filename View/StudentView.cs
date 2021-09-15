@@ -68,9 +68,9 @@ namespace UddataH1.View
             return searchResultList;
         }
 
-        public void ShowStudents(List<Student> student)
+        public void ShowStudents(List<Student> students)
         {
-            foreach (Student student in student)
+            foreach (Student student in students)
             {
                 ShowStudent(student);
             }
@@ -81,5 +81,11 @@ namespace UddataH1.View
             Console.WriteLine("Name: " + student.Name);
             Console.WriteLine("Email: " + student.Email);
         }
+
+        public void StudentWarning()
+        {
+
+        }
+
     }
 }

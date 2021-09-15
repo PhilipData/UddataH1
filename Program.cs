@@ -15,7 +15,7 @@ namespace UddataH1
         }
         void InsertData()
         {
-            Student teacher1 = new Student()
+            Teacher teacher1 = new Teacher()
             {
                 Id = 1,
                 Name = "Andersen",
@@ -23,7 +23,7 @@ namespace UddataH1
 
             };
 
-            Student teacher2 = new Student()
+            Teacher teacher2 = new Teacher()
             {
                 Id = 2,
                 Name = "Kaj",

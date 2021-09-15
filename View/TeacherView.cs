@@ -10,18 +10,18 @@ namespace UddataH1.View
 {
     class TeacherView
     {
-        public List<Student>ListOfAllTeachers = new List<Student>();
+        public List<Teacher> ListOfAllTeachers = new List<Teacher>();
 
         void InsertData()
         {
-            ListOfAllTeachers.Add(new Student()
+            ListOfAllTeachers.Add(new Teacher()
             {
                 Id = 1,
                 Name = "Andersen",
                 Email = "Andersen@gmail.com"
 
             });
-            ListOfAllTeachers.Add(new Student()
+            ListOfAllTeachers.Add(new Teacher()
             {
                 Id = 2,
                 Name = "Henning",
@@ -37,7 +37,7 @@ namespace UddataH1.View
 
         public void AddTeacher()
         {
-            Student teacher = new Student();
+            Teacher teacher = new Teacher();
             Console.WriteLine("Insert Name on Teacher: ");
             teacher.Name = Console.ReadLine();
 
@@ -59,10 +59,10 @@ namespace UddataH1.View
             ShowTeachers(SearchTeacherByName(Console.ReadLine()));
         }
 
-        public List<Student> SearchTeacherByName(string search)
+        public List<Teacher> SearchTeacherByName(string search)
         {
-            List<Student> searchResultList = new List<Student>();
-            foreach (Student teacher in ListOfAllTeachers)
+            List<Teacher> searchResultList = new List<Teacher>();
+            foreach (Teacher teacher in ListOfAllTeachers)
             {
                 if (teacher.Name.Contains(search))
                     searchResultList.Add(teacher);
@@ -72,21 +72,21 @@ namespace UddataH1.View
                 return searchResultList;
         }
 
-        public void ShowTeachers(List<Student> teachers)
+        public void ShowTeachers(List<Teacher> teachers)
         {
-            foreach (Student teacher in teachers)
+            foreach (Teacher teacher in teachers)
             {
                 ShowTeacher(teacher);
             }
         }
 
-        public void ShowTeacher(Student teacher)
+        public void ShowTeacher(Teacher teacher)
         {
             Console.WriteLine("Name: " + teacher.Name);
             Console.WriteLine("Email: " + teacher.Email);
         }
 
-        private static bool IsCoffeeClub(Student teacher, bool isSyntaxOk)
+        private static bool IsCoffeeClub(Teacher teacher, bool isSyntaxOk)
         {
             Console.WriteLine("Is the teacher signed up to the Coffee club? Tast\n 1: (j/n)");
             string s = Console.ReadLine().ToLower();
